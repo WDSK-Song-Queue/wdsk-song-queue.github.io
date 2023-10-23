@@ -1,4 +1,4 @@
-const socket = io("ws://wdsk-queue.ddns.net:9375")
+const socket = io("wss://wdsk-control-panel.donovanedwards.repl.co")
 
 var current_view = "tracks"
 
@@ -75,3 +75,4 @@ socket.on("connect", () => {
 
 socket.on("request_queue", renderEntireQueue)
 socket.on("queue_update", renderEntireQueue)
+socket.on("hai", console.log)
