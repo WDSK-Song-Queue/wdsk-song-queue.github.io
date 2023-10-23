@@ -1,0 +1,83 @@
+.track-list {
+	overflow-y: scroll;
+	display: flex;
+	justify-content: flex-start;
+	grid-gap: 15px;
+    flex-direction: column;
+}
+
+.queue-obj-top-frame {
+    display: flex;
+    width: calc(100% - 30px);
+    height: calc(96px - 30px);
+    background: #353535;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.queue-obj-frame[nowplaying] > .queue-obj-top-frame {
+    background: #024aca;
+}
+
+.queue-obj-bottom-frame {
+    display: flex;
+    width: calc(100% - 30px);
+    height: 64px;
+    background: #151515;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.queue-obj-frame[nowplaying] > .queue-obj-bottom-frame {
+    background: #00177D;
+}
+
+.queue-obj-title {
+    font-family: Passion One;
+    font-size: 24px;
+    text-wrap: nowrap;
+    overflow-x: clip;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.queue-obj-author {
+    font-family: Passion One;
+    font-size: 20px;
+    text-wrap: nowrap;
+    overflow-x: clip;
+    text-overflow: ellipsis;
+    width: 100%;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.queue-obj-queuer {
+    font-family: Passion One;
+    font-size: 20px;
+    text-wrap: nowrap;
+    overflow-x: clip;
+    text-overflow: ellipsis;
+    width: 100%;
+    color: #fff;
+    opacity: 0.5;
+}
+
+span.queue-obj-button {
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    color: #ffffff7c;
+    transition: color 250ms;
+}
+
+span.queue-obj-button:hover {
+    color: #ffffff;
+}

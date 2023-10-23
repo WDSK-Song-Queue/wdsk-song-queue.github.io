@@ -1,0 +1,10 @@
+:root {
+	--theme-default-back: #151515;
+	--theme-default-back-light-1: #252525;
+	--theme-default-back-light-2: #353535;
+
+	--theme-positive: #3CCD39;
+	--theme-positive-light-1: #56ff6b;
+	--theme-positive-light-2: #56ff6b;
+	--theme-hyperlink: #024aca;
+}

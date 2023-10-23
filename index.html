@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WDSK Viewer Panel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queue_obj.css" />
+
+    <meta property="og:title" content="WDSK Viewer Panel (v0.0.1)" />
+    <meta property="og:description" content="Online panel that interacts with Scooter's control panel to show information about the song queue!" />
+  </head>
+  <body>
+    <div id="top-bar">
+      <button class="active-items-button" style="background-image: url(assets/button-queue.png)" id="top-tracks"></button>
+      <button class="active-items-button" style="background-image: url(assets/button-history.png)" id="top-history"></button>
+      <button class="active-items-button" style="background-image: url(assets/button-banger.png)" id="top-bangers"></button>
+      <button class="active-items-button" style="background-image: url(assets/button-leaderboard.png)" id="top-board"></button>
+    </div>
+
+    <div id="main">
+      <div id="tracks" class="track-list"></div>
+      <div id="history" class="track-list"></div>
+      <div id="bangers" class="track-list"></div>
+      <div id="board" class=""></div>
+    </div>
+
+    <!-- Man I sure hope I only need this script, suurely -->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+
+    <script src="moment.js"></script>
+    <script src="blulib.js"></script>
+    <script src="init.js"></script>
+    <script src="queue_obj.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
