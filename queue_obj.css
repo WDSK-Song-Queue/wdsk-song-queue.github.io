@@ -1,8 +1,8 @@
 .track-list {
-	overflow-y: scroll;
-	display: flex;
-	justify-content: flex-start;
-	grid-gap: 15px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: flex-start;
+    grid-gap: 15px;
     flex-direction: column;
 }
 
@@ -80,4 +80,46 @@ span.queue-obj-button {
 
 span.queue-obj-button:hover {
     color: #ffffff;
+}
+
+.board-list {
+    display: flex;
+    grid-gap: 15px;
+    flex-direction: column;
+}
+
+.board-member-frame {
+    background: #353535;
+    width: 100%;
+    height: calc(64px - 10px);
+    padding: 5px;
+    display: grid;
+    border-radius: 32px;
+    /* grid-gap: 32px; */
+    grid-template-columns: 64px calc(100% - 64px - 64px) 64px;
+    align-items: center;
+}
+
+.board-member-name {
+    font-family: Passion One;
+    font-size: 32px;
+    place-self: center;
+}
+
+.board-member-emblem {
+    width: 32px;
+    height: 32px;
+    place-self: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.board-member-name[placing="1"] { color: #ffca00 }
+.board-member-name[placing="2"] { color: silver }
+.board-member-name[placing="3"] { color: #9b4216 }
+
+.board-member-count {
+    font-family: Passion One;
+    font-size: 32px;
+    place-self: center;
 }

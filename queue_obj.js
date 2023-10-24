@@ -50,3 +50,50 @@ function renderQueueObj(queueObj, buttons = [], now_playing = false) {
 }
 
 function queueObjButton(name, icon, click) { return {name, icon, click} }
+
+function renderBoardMember(name, count, placing, click = null) {
+	var frameElem = new Elem("div")
+
+	var nameElem = new Elem("p")
+	var countElem = new Elem("p")
+	var emblemElem = new Elem("div")
+
+	frameElem.classes.add("board-member-frame")
+	frameElem.setAttr("placing", placing)
+
+	nameElem.text = name
+	nameElem.classes.add("board-member-name")
+
+	countElem.text = count
+	countElem.classes.add("board-member-count")
+
+	emblemElem.classes.add("board-member-emblem")
+	switch (placing) {
+		case 1:
+			emblemElem.style["background-image"] = `url(assets/1st.png)`
+		break;
+		case 2:
+			emblemElem.style["background-image"] = `url(assets/2nd.png)`
+		break;
+		case 3:
+			emblemElem.style["background-image"] = `url(assets/3rd.png)`
+		break;
+		default:
+			emblemElem.style["background-image"] = ``
+		break;
+	}
+
+	if (click) { frameElem.on("click", click) }
+
+	frameElem.addChild(emblemElem)
+	frameElem.addChild(nameElem)
+	frameElem.addChild(countElem)
+
+	return frameElem
+}
+
+function getBangerCount(member, data_set = QueueStorage.data) {
+	return data_set.tracks.filter(queueObj => {
+		return (queueObj.queuer == member && queueObj.banger != null)
+	}).length
+}
