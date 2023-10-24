@@ -114,3 +114,4 @@ socket.on("connect", () => {
 
 socket.on("request_queue", renderEntireQueue)
 socket.on("queue_update", renderEntireQueue)
+socket.on("print", console.log)
